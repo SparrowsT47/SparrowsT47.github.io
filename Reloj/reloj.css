@@ -1,0 +1,21 @@
+#reloj {
+    font-family: 'Share Tech Mono', monospace;
+    color: #00ff00;  
+    font-size: 48px;
+    text-align: center;
+    position: fixed;
+    bottom: 20px;  
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;  
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);  
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);  
+  }
+  
+  #reloj span {
+    font-size: 24px;
+    display: block;
+  }
+  
