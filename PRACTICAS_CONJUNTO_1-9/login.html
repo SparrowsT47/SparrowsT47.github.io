@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login - Mercenarios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      
+      <img
+        src="IMG/parche.png"  
+        alt="Parche Mercenario"
+        class="logo-mercenario"
+      />
+
+      <h2>ACCESO </h2>
+      <form id="formLogin">
+        <label for="usuario">ID de Operador:</label>
+        <input type="text" id="usuario" name="usuario" required />
+
+        <label for="contrasena">Clave de Autenticación:</label>
+        <input type="password" id="contrasena" name="contrasena" required />
+
+        <button type="submit">INGRESAR</button>
+      </form>
+      <p id="mensaje" class="mensaje-error"></p>
+      <p class="footer">Red segura - Zona de Exclusión © 2025</p>
+    </div>
+
+    <script>
+      document.getElementById("formLogin").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const usuario = document.getElementById("usuario").value.trim();
+        const contrasena = document.getElementById("contrasena").value.trim();
+        const mensaje = document.getElementById("mensaje");
+
+        // Usuario y contraseña predefinidos
+        if (usuario === "merc001" && contrasena === "zonasegura") {
+          mensaje.textContent = "Acceso concedido...";
+          mensaje.style.color = "#00ff00";
+          setTimeout(() => {
+            window.location.href = "index.html"; 
+          }, 1500);
+        } else {
+          mensaje.textContent = "ACCESO DENEGADO - CREDENCIALES INVÁLIDAS";
+          mensaje.style.color = "red";
+        }
+      });
+    </script>
+  </body>
+</html>
